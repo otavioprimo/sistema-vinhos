@@ -1,0 +1,149 @@
+body {
+    background-color: #1a1a1a;
+
+}
+
+h4{
+  margin: 10px 0px 10px;
+}
+
+section{
+  padding-top:50px;
+}
+.card{
+  width:450px;
+  height:200px;
+  background-color: white;
+  float:left;
+  margin:1%;
+  background-color: #1a1a1a;
+  box-shadow: 5px 5px 3px #0d0d0d;
+  border-left:solid 5px #790632;
+  cursor: pointer;
+}
+.card:hover>.img-content{
+  width: 200px;
+  animation-name: example;
+  animation-duration: 0.5s;
+}
+
+@keyframes example {
+    from {width: 0px;}
+    to {width: 200px;}
+}
+
+.card img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  margin-top:20px;
+  margin-left:20px;
+}
+
+.img-content{
+  height:198px;
+  width:0px;
+  background-color:#790632;
+}
+
+
+.card-content{
+  float: right;
+  position:Absolute;
+  right:0px;
+  width:190px;
+}
+
+.square {
+  width: 40%;
+  background-color: aqua;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content{
+  background-color: #1a1a1a;
+}
+
+.modal-header{
+  background-color:#790632;
+  color:#ffffff;
+  border-bottom: 1px solid transparent;
+}
+.modal-footer{
+  border-top: 1px solid transparent;
+}
+.modal-content .modal-img{
+  float:left;
+  width:40%;
+}
+.modal-content .modal-img img{
+  max-width:100%;
+}
+.modal-vinhos-content{
+  float: right;
+  width:60%;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.modal button{
+  background-color:#790632;
+  color:#ffffff;
+  cursor: pointer;
+}
+.modal p{
+margin-bottom:5px;
+}
+
+.navbar{
+  background-color:#790632;
+  color:#ffffff;
+  position:fixed;
+  width:100%;
+  z-index:100;
+}
+.navbar-light .navbar-brand{
+  color:#ffffff;
+}
+
+
+#fileuploader{
+  margin-top: 10px;
+}
+#fileuploader2{
+  margin-top: 10px;
+}
+
+.ajax-file-upload-container{
+  margin-bottom: -25px;
+  margin-top: -3px;
+  margin-left: -5px;
+}
+
+.navbar a{
+  cursor: pointer;
+}
+
+input{
+  margin-bottom:10px;
+}
+textarea{
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .card{
+    width:100%;
+  }
+}
+

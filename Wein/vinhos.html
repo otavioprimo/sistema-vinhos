@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wein</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/vinhos.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" class="nav-btn">Wein</a>
+        <a class="navbar-brand" class="nav-btn" data-toggle="modal" data-target="#novoVinho">Novo Vinho</a>
+    </nav>
+
+    <section id="main-section">
+
+    </section>
+
+    <!-- MODAL DETALHES DO VINHO -->
+    <div class="modal fade" id="modalVinho" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNome"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-img">
+                        <img id="imgModal" src="">
+                    </div>
+                    <div class="modal-vinhos-content">
+                        <p id="modalPais"></p>
+                        <p id="modalRegiao"></p>
+                        <p id="modalAno"></p>
+                        <p id="modalUva"></p>
+                        <p id="modalDescricao"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" id="btn-alterar">Alterar</button>
+                    <button type="button" class="btn" id="btn-excluir">Excluir</button>
+                    <button type="button" class="btn" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL NOVO VINHO -->
+    <div class="modal fade" id="novoVinho" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Novo Vinho</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    <input type="text" class="form-control" id="pais" placeholder="Pais">
+                    <input type="text" class="form-control" id="regiao" placeholder="Região">
+                    <input type="text" class="form-control" id="ano" placeholder="Ano">
+                    <input type="text" class="form-control" id="uva" placeholder="Tipo de Uva">
+                    <textarea class="form-control" rows="5" id="descricao" placeholder="Descrição"></textarea>
+                    <div id="fileuploader">Salvar Imagem</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" id="dismiss-modal-nvinho">Cancelar</button>
+                    <button type="button" class="btn" id="btn-nvinho">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ALTERAR VINHO -->
+    <div class="modal fade" id="altVinho" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alterar Vinho</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="altnome" placeholder="Nome">
+                    <input type="text" class="form-control" id="altpais" placeholder="Pais">
+                    <input type="text" class="form-control" id="altregiao" placeholder="Região">
+                    <input type="text" class="form-control" id="altano" placeholder="Ano">
+                    <input type="text" class="form-control" id="altuva" placeholder="Tipo de Uva">
+                    <textarea class="form-control" rows="5" id="altdescricao"></textarea>
+                    <div id="fileuploader2">Alterar Imagem</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" id="dismiss-modal-altvinho">Cancelar</button>
+                    <button type="button" class="btn" id="btn-altvinho">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/main.js"></script>
+    <script src="js/vinhos.js"></script>
+
+</body>
+
+</html>
